@@ -1,13 +1,13 @@
 package com.lcj.lottogenie.data
 
-private const val EMPTY_STRING = "-"
+private const val EMPTY_STRING = 0
 
 data class LottoData(
-    val gameNumber: String = EMPTY_STRING,
-    val winNumbers: List<String> = emptyList(),
-    val bonusNumber: String = EMPTY_STRING,
-    val totalWinPrize: String = EMPTY_STRING,
-    val winPrize: String = EMPTY_STRING,
-    val winnerCount: String = EMPTY_STRING,
-    val data: String = EMPTY_STRING
+    val gameNumber: Int = 0,
+    val winNumbers: List<Int> = emptyList(),
+    val bonusNumber: Int = 0,
+    val totalWinPrize: Long = 0,
+    val winPrize: Int = 0,
+    val winnerCount: Int = 0,
+    val data: String = ""
 )

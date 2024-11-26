@@ -89,16 +89,16 @@ class MainActivity : ComponentActivity() {
             // 리스트에 데이터 맵핑
             listWinNumberView.mapIndexed { index, tv ->
                 val numbers = data.winNumbers
-                tv.text = if (numbers.isNotEmpty()) numbers[index] else ""
+                tv.text = (if (numbers.isNotEmpty()) numbers[index] else "") as CharSequence?
             }
 
             //보너스숫자에 데이터 갱신
-            numberBonusText.text = data.bonusNumber
+            numberBonusText.text = data.bonusNumber.toString()
 
             // 금액 출력
-            val prize = data.totalWinPrize.toBillion()
+            val prize = data.totalWinPrize.toString().toBillion()
             winAmountText.text = getHtmlText(R.string.win_prize, prize)
-            val prizeOne = data.winPrize.toBillion()
+            val prizeOne = data.winPrize.toString().toBillion()
             win1AmountText.text = getHtmlText(R.string.win_prize_1, prizeOne)
         }
     }

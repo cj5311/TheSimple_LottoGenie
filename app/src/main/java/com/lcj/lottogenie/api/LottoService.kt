@@ -1,6 +1,7 @@
 package com.lcj.lottogenie.api
 
 import com.lcj.lottogenie.data.LottoModel
+import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Query
 
@@ -12,3 +13,4 @@ interface LottoService {
         @Query("method") method: String = "getLottoNumber"
     ): LottoModel
 }
+
